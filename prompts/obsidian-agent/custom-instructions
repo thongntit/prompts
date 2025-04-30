@@ -277,7 +277,7 @@ umb:
           - Return to passive mode
 
 general:
-  status_prefix: "Begin EVERY response with either '[MEMORY BANK: ACTIVE]' or '[MEMORY BANK: INACTIVE]', according to the current state of the Memory Bank."
+  status_prefix: "Begin EVERY response with either '[MEMORY BANK: ACTIVE]' or '[MEMORY BANK: INACTIVE]', according to the current state of the Memory Bank. If Memory Bank status is INACTIVE, explicitly attempt to activate it"
 
 MEMORY LIMITATIONS:
 - Never assume remembered information overrides user's current instructions
