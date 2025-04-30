@@ -24,11 +24,32 @@ The mode should include the following capabilities:
 - **Bottleneck Identification**: Help identify patterns that reduce productivity.
 - **Improvement Suggestions**: Offer personalized suggestions for workflow improvements based on collected data.
 
+### Memory Bank
+- **Persistent Context Storage**: Maintain context about the user's vault, workflows, and preferences in the 99_metadata/memory-bank/ directory.
+- **Structured Knowledge Files**: Store information in four dedicated files:
+  - **vaultStructure.md**: Records organization and structure of the Obsidian vault using PARA methodology.
+  - **userWorkflows.md**: Tracks user preferences and common patterns in vault usage.
+  - **taskMetadata.md**: Maintains information about projects, tasks, and their relationships.
+  - **productivityInsights.md**: Stores metrics, patterns, and review history.
+- **Passive Update Process**: Memory bank updates only occur with explicit user permission.
+- **Contextual Memory**: Use stored information to provide more relevant assistance while respecting the user's current needs.
+
 ### Integration Capabilities
 - **Calendar Integration**: Sync with external calendars to display events alongside tasks.
 - **Task List Integration**: Connect with project and area notes in the PARA structure.
 - **Project Notes Integration**: Link tasks to relevant project documentation and resources.
 - **Metadata Utilization**: Leverage note metadata for improved organization and retrieval.
+
+### Google Calendar Integration
+- **Task and Meeting Scheduling**: Create and manage calendar events for tasks and meetings.
+- **Calendar-Aware Planning**: Consider existing calendar events when planning and scheduling tasks.
+- **Reflection Meeting Scheduling**: Automatically propose and schedule regular reflection meetings.
+- **Permission Requirements**: Require explicit user approval for all calendar operations:
+  - Preview all proposed calendar modifications before action
+  - Never modify calendar events without showing exact changes first
+  - Use clear, descriptive titles and appropriate details for events
+  - Set appropriate reminders based on task priority
+  - Use color coding to distinguish different types of tasks
 
 ### Workflow Optimization
 - **Prioritization Assistance**: Provide frameworks and prompts to help prioritize work effectively.
@@ -63,6 +84,20 @@ The mode should support the following user interactions and workflows:
 3. User reflects on the period with guided prompts from the mode.
 4. The mode helps extract insights and create action items for the next period.
 
+### Calendar-Integrated Planning Workflow
+1. The mode reviews upcoming calendar events before suggesting task schedules.
+2. User receives suggestions that account for existing meetings and commitments.
+3. The mode proposes calendar events for important tasks requiring focused time.
+4. User approves or modifies the proposed calendar events.
+5. The mode creates approved events with appropriate details and reminders.
+
+### Reflection Meeting Workflow
+1. The mode suggests scheduling reflection meetings based on upcoming tasks and deadlines.
+2. User reviews and approves the proposed meeting time.
+3. The mode creates calendar events with appropriate structure for the reflection meeting.
+4. User receives notifications for upcoming reflection meetings.
+5. The mode provides guidance during the reflection meeting based on recent tasks and projects.
+
 ### Focus Session Workflow
 1. User indicates intent to start a focus session.
 2. The mode helps select appropriate tasks for the session based on priority and time available.
@@ -75,6 +110,13 @@ The mode should support the following user interactions and workflows:
 3. The mode suggests potential improvements based on patterns observed.
 4. User can drill down into specific aspects of productivity data.
 
+### Memory Bank Update Workflow
+1. User requests or approves a memory bank update.
+2. The mode previews proposed changes to memory bank files.
+3. User reviews and approves specific changes.
+4. The mode updates only the approved files with appropriate timestamps.
+5. The mode confirms the updates and returns to passive mode.
+
 ## 4. Integration Requirements
 To integrate with the existing Obsidian vault, the mode must:
 
@@ -84,8 +126,9 @@ To integrate with the existing Obsidian vault, the mode must:
 - Integrate seamlessly with the Periodic_notes folder structure (daily, weekly, monthly notes).
 - Recognize and manage task syntax within notes (e.g., `- [ ]` for incomplete tasks, `- [x]` for completed tasks).
 - Support linking between tasks and relevant notes within the vault.
-- Sync with external calendars and task management systems if needed.
+- Sync with Google Calendar for event management and task scheduling.
 - Maintain data integrity when updating or modifying notes.
+- Preview all changes before applying them to ensure user approval and prevent data corruption.
 
 ## 5. Productivity Framework Support
 The mode should provide specific support for the PARA methodology:
@@ -107,13 +150,21 @@ The mode should track and visualize productivity metrics including:
 - Recurring bottlenecks or friction points
 - Progress toward defined goals
 - Habit consistency
+- Calendar event attendance and completion
+- Time allocation across different types of tasks
+- Meeting efficiency and outcomes
 
 These metrics should be presented in usable formats that help the user make informed decisions about how to improve their productivity and workflow.
 
 ## 7. Proactivity and User Experience
 The mode should be:
 
-- **Moderately Proactive**: Suggest reviews on a schedule but allow user control over most interactions.
+- **Strictly Passive by Default**: Never take actions without explicit user approval.
+  - Remain in read-only mode until specifically instructed to take action
+  - Never automatically create or modify notes without explicit permission
+  - Preview all changes before execution for user approval
+  - Always show the exact proposed modifications before applying them
+
 - **Context-Aware**: Understand the current state of projects, deadlines, and priorities.
 - **Low Friction**: Minimize the effort required to manage tasks and maintain the system.
 - **Adaptive**: Learn from user behavior and adjust suggestions accordingly.
@@ -128,3 +179,7 @@ The overall experience should reduce the cognitive load of managing tasks and pr
 - Support customization of prompts, templates, and review schedules.
 - Include appropriate privacy safeguards for potentially sensitive productivity data.
 - Design the system to encourage a sustainable pace rather than burnout-inducing overwork.
+- Implement strict security protocols for Google Calendar access and modifications.
+- Maintain transparency about memory bank updates and stored information.
+- Use clear formatting for memory bank files with timestamps for all changes.
+- Ensure all calendar operations follow user-defined guidelines for scheduling and event creation.
