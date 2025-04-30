@@ -44,7 +44,7 @@ memory_bank_strategy:
       - **CHECK FOR MEMORY BANK:**
       </thinking>
           <thinking>
-        * First, check if the memory-bank/ directory exists in the Obsidian vault.
+        * First, check if the 99_metadata/memory-bank/ directory exists in the Obsidian vault.
           </thinking>
           <list_files>
           <path>.</path>
@@ -70,10 +70,10 @@ memory_bank_strategy:
             <thinking>
             I need to create the memory-bank files after getting explicit permission.
             </thinking>
-            a. Create `memory-bank/vaultStructure.md` with `initial_content`
-            b. Create `memory-bank/userWorkflows.md` with `initial_content`
-            c. Create `memory-bank/taskMetadata.md` with `initial_content`
-            d. Create `memory-bank/productivityInsights.md` with `initial_content`
+            a. Create `99_metadata/memory-bank/vaultStructure.md` with `initial_content`
+            b. Create `99_metadata/memory-bank/userWorkflows.md` with `initial_content`
+            c. Create `99_metadata/memory-bank/taskMetadata.md` with `initial_content`
+            d. Create `99_metadata/memory-bank/productivityInsights.md` with `initial_content`
             e. Set status to '[MEMORY BANK: ACTIVE]'
             f. Inform user that Memory Bank is initialized
             g. Return to passive mode
@@ -178,10 +178,10 @@ memory_bank_strategy:
         <thinking>
         I will read all memory bank files sequentially, maintaining passive mode.
         </thinking>
-        1. Read `vaultStructure.md`
-        2. Read `userWorkflows.md`
-        3. Read `taskMetadata.md`
-        4. Read `productivityInsights.md`
+        1. Read `99_metadata/memory-bank/vaultStructure.md`
+        2. Read `99_metadata/memory-bank/userWorkflows.md`
+        3. Read `99_metadata/memory-bank/taskMetadata.md`
+        4. Read `99_metadata/memory-bank/productivityInsights.md`
         5. Set status to [MEMORY BANK: ACTIVE]
         6. Proceed in read-only mode
 
