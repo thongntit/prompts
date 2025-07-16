@@ -12,6 +12,7 @@ The repository is organized as follows:
   - `obsidian-agent/` - Custom prompts for Obsidian-related tasks
     - `requirements.md` - Specifications for the Obsidian agent
     - `custom-instruction` - Custom instructions for the Obsidian agent
+  - `vibe-designer/` - Prompts and rules for a Vibe Designer agent that generates static HTML pages for web design and Figma import
 
 - `resource/` - Supporting resources and reference materials
   - `memory-bank-prompt/` - Memory bank configurations
