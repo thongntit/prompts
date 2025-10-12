@@ -1,0 +1,15 @@
+{
+  "name": "Obsidian Second Brain (Roo Code)",
+  "description": "Roo Code custom mode for Obsidian vault management with PARA methodology, including productivity commands",
+  "version": "1.0.0",
+  "editors": {
+    "roo": {
+      ".roomodes": {
+        "location": ".roomodes"
+      },
+      ".roo/commands/": {
+        "location": ".roo/commands/"
+      }
+    }
+  }
+}

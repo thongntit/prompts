@@ -1,0 +1,16 @@
+{
+  "name": "AI Coding Agent",
+  "description": "Global rules for AI coding assistant with memory and context management, plus workflow commands",
+  "version": "1.0.0",
+  "editors": {
+    "claude-code": {
+      "system-prompt.md": {
+        "location": ".claude/CLAUDE.md",
+        "prefix": "# Claude Code Assistant\n\n"
+      },
+      "commands/": {
+        "location": ".claude/commands/"
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 ---
-description: "Extracts current conversation context into a windsurf.md file for comprehensive knowledge reuse"
+description: "Extracts current conversation context into a brief.md file for comprehensive knowledge reuse"
 ---
 
 ### Extract Context Workflow
@@ -18,7 +18,7 @@ description: "Extracts current conversation context into a windsurf.md file for 
    - User Preferences (coding style, communication style)
    - Current Status (what's been implemented, next steps)
 
-3. **Create windsurf.md File**: Generate a comprehensive markdown file containing:
+3. **Create brief.md File**: Generate a comprehensive markdown file containing:
    - Clear section headers for easy navigation
    - Bullet points for quick scanning
    - Code examples where relevant
@@ -30,7 +30,7 @@ description: "Extracts current conversation context into a windsurf.md file for 
    - No sensitive information is included
    - File follows consistent markdown formatting
 
-5. **Save and Confirm**: Save the windsurf.md file in the project root and confirm with user:
+5. **Save and Confirm**: Save the brief.md file in the project root and confirm with user:
    - File location and accessibility
    - Content completeness
    - Any additional context to include
