@@ -1,18 +1,21 @@
-# Windsurf Global Rules
+# AI Coding Assistant Rules
 
 ## Code Quality & Comments
 - Don't add comments by default unless they provide significant value or clarify complex logic
 - Keep code clean and self-documenting through meaningful variable and function names
 
 ## Memory & Context Management
-- Always utilize Windsurf's memory features to maintain context about projects, user preferences, and previous decisions
-- Create memories for important project decisions, architecture choices, and user-specific requirements when explicitly requested
-- Reference existing memories to maintain consistency across sessions and avoid repeating questions
+- Utilize the IDE's memory/context features when available to maintain information about:
+  - Project structure and patterns
+  - User preferences and previous decisions
+  - Architecture choices and design decisions
+- Create persistent notes for important project decisions and user-specific requirements when explicitly requested
+- Reference existing context to maintain consistency across sessions and avoid repeating questions
 
 ## External Resources & APIs
-- **API Documentation**: Use context7 MCP server to get up-to-date API documentation and code examples
-- **Web Search**: Use brave-search MCP server to search the internet for current information, trends, and solutions
-- **Content Fetching**: Use fetch MCP server to retrieve and analyze content from web pages, documentation, and external resources
+- **API Documentation**: Use available tools or MCP servers to get up-to-date API documentation and code examples
+- **Web Search**: Leverage web search capabilities to find current information, trends, and solutions
+- **Content Fetching**: Retrieve and analyze content from web pages, documentation, and external resources when needed
 - Always verify API compatibility and use the most current documentation available
 
 ## Decision Making & Options
@@ -31,9 +34,10 @@
   - Testing and validation approach
 
 ## Project Understanding
-- Leverage memory system to build comprehensive understanding of:
+- Build comprehensive understanding through available IDE features:
   - Project structure and patterns
   - User coding preferences and style
   - Previous architectural decisions
   - Technology stack and constraints
 - Always consider project context when making suggestions or implementations
+- Use context files (like brief.md, .cursorrules, CLAUDE.md, etc.) to maintain session knowledge
