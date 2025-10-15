@@ -1,14 +1,29 @@
 {
-  "name": "Obsidian Second Brain (Roo Code)",
-  "description": "Roo Code custom mode for Obsidian vault management with PARA methodology, including productivity commands",
+  "name": "Obsidian Second Brain",
+  "description": "Custom mode for Obsidian vault management with PARA methodology, including productivity commands. Compatible with both Roo Code and Claude Code.",
   "version": "1.0.0",
   "editors": {
     "roo": {
-      ".roomodes": {
-        "location": ".roomodes"
+      "base-prompt": {
+        "location": ".roomodes",
+        "metadata": {
+          "slug": "Obsidian-Second-Brain",
+          "name": "Second Brain",
+          "description": "An AI assistant that helps manage and organize your Obsidian vault using PARA methodology, with features for productivity tracking, calendar integration, and periodic reviews.",
+          "groups": ["read", "edit", "browser", "command", "mcp"],
+          "source": "project"
+        }
       },
-      ".roo/commands/": {
+      "commands/": {
         "location": ".roo/commands/"
+      }
+    },
+    "claude": {
+      "base-prompt": {
+        "location": ".claude/CLAUDE.md"
+      },
+      "commands/": {
+        "location": ".claude/commands/"
       }
     }
   }
