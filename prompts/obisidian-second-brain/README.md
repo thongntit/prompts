@@ -7,17 +7,13 @@ Roo Code custom mode for Obsidian vault management with PARA methodology, includ
 Install this prompt using [tprompts](https://github.com/thongntit/tprompts):
 
 ```bash
-# Direct installation (no registration required)
-tprompts install https://github.com/thongntit/prompts/tree/main/prompts/obisidian-second-brain roo
-```
+# First, install tprompts if you haven't already
+npm install -g @thongntit/tprompts
 
-Or register the repository first for easier management:
-
-```bash
-# Register the repository
+# Register the prompts repository
 tprompts register https://github.com/thongntit/prompts.git
 
-# Then install the prompt
+# Install the prompt pack
 tprompts install prompts/obisidian-second-brain roo
 ```
 
