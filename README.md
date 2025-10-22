@@ -1,8 +1,8 @@
-# Custom Prompts for AI Coding Assistants
+# Custom Prompts Collection
 
 ## Project Overview
 
-This repository provides a collection of production-ready prompt configurations for AI coding assistants, specifically designed for [tprompts](https://github.com/dzhng/tprompts) compatibility. Each prompt collection includes system instructions, custom commands, and specialized workflows optimized for different coding and productivity scenarios.
+This repository provides a collection of production-ready prompt configurations for various AI assistants, specifically designed for [tprompts](https://github.com/dzhng/tprompts) compatibility. Each prompt collection includes system instructions, custom commands, and specialized workflows optimized for different use cases including coding assistance, productivity management, and knowledge organization.
 
 ## Quick Start
 
@@ -18,7 +18,9 @@ tprompts register https://github.com/thongntit/prompts.git
 
 ## Available Prompts
 
-### 1. AI Coding Agent (Claude Code)
+### Coding Assistants
+
+#### AI Coding Agent (Claude Code)
 **Purpose**: Enhanced coding assistant with memory management and workflow automation
 
 ```bash
@@ -35,7 +37,9 @@ tprompts install prompts/coding-agent claude-code
 
 ---
 
-### 2. Obsidian Agent (Claude Code)
+### Productivity & Knowledge Management
+
+#### Obsidian Agent (Claude Code)
 **Purpose**: Productivity assistant for Obsidian vault management
 
 ```bash
@@ -50,10 +54,8 @@ tprompts install prompts/obsidian-agent claude-code
 
 **Commands:** Available as `/obsidian-agent`
 
----
-
-### 3. Obsidian Second Brain (Roo Code)
-**Purpose**: Custom Roo Code mode for personal knowledge management
+#### Obsidian Second Brain (Roo Code)
+**Purpose**: Personal knowledge management system for Obsidian vaults
 
 ```bash
 tprompts install prompts/obisidian-second-brain roo
