@@ -2,15 +2,15 @@
 
 ## Project Overview
 
-This repository provides a collection of production-ready prompt configurations for various AI assistants, specifically designed for [tprompts](https://github.com/dzhng/tprompts) compatibility. Each prompt collection includes system instructions, custom commands, and specialized workflows optimized for different use cases including coding assistance, productivity management, and knowledge organization.
+This repository provides a collection of production-ready prompt configurations for various AI assistants, specifically designed for [tprompts](https://github.com/thongntit/tprompts) compatibility. Each prompt collection includes system instructions, custom commands, and specialized workflows optimized for different use cases including coding assistance, productivity management, and knowledge organization.
 
 ## Quick Start
 
-Install [tprompts](https://github.com/dzhng/tprompts) and register this repository:
+Install [tprompts](https://github.com/thongntit/tprompts) and register this repository:
 
 ```bash
 # Install tprompts
-npm install -g tprompts
+npm install -g @thongntit/tprompts
 
 # Register this repository
 tprompts register https://github.com/thongntit/prompts.git
@@ -85,15 +85,6 @@ prompts/
 └── obisidian-second-brain/ # Roo Code: Knowledge management
     ├── .roo/commands/     # Productivity commands
     └── tprompts.json      # Configuration
-```
-
-## Direct Installation
-
-Each prompt can also be installed directly without repository registration:
-
-```bash
-# Example for coding-agent
-tprompts install https://github.com/thongntit/prompts/tree/main/prompts/coding-agent claude-code
 ```
 
 ## Recent Updates
