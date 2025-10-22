@@ -4,7 +4,7 @@ Productivity assistant for Obsidian vault management using PARA methodology with
 
 ## Installation
 
-Install this prompt using [tprompts](https://github.com/dzhng/tprompts):
+Install this prompt using [tprompts](https://github.com/thongntit/tprompts):
 
 ```bash
 # Direct installation (no registration required)

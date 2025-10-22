@@ -4,7 +4,7 @@ Roo Code custom mode for Obsidian vault management with PARA methodology, includ
 
 ## Installation
 
-Install this prompt using [tprompts](https://github.com/dzhng/tprompts):
+Install this prompt using [tprompts](https://github.com/thongntit/tprompts):
 
 ```bash
 # Direct installation (no registration required)

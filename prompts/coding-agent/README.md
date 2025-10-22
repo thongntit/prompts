@@ -4,7 +4,7 @@ Global rules for AI coding assistant with memory and context management, plus wo
 
 ## Installation
 
-Install this prompt using [tprompts](https://github.com/dzhng/tprompts):
+Install this prompt using [tprompts](https://github.com/thongntit/tprompts):
 
 ```bash
 # Direct installation (no registration required)
