@@ -1,38 +1,116 @@
-# Custom Prompts
+# Custom Prompts for AI Coding Assistants
 
 ## Project Overview
 
-This repository serves as a centralized collection of custom prompts designed for various AI applications and use cases. It contains carefully crafted prompts that can be integrated into different projects to enhance AI interactions and achieve specific outcomes.
+This repository provides a collection of production-ready prompt configurations for AI coding assistants, specifically designed for [tprompts](https://github.com/dzhng/tprompts) compatibility. Each prompt collection includes system instructions, custom commands, and specialized workflows optimized for different coding and productivity scenarios.
 
-## Structure
+## Quick Start
 
-The repository is organized as follows:
+Install [tprompts](https://github.com/dzhng/tprompts) and register this repository:
 
-- `prompts/` - Contains specialized prompt collections
-  - `obsidian-agent/` - Custom prompts for Obsidian-related tasks
-    - `requirements.md` - Specifications for the Obsidian agent
-    - `custom-instruction` - Custom instructions for the Obsidian agent
-  - `vibe-designer/` - Prompts and rules for a Vibe Designer agent that generates static HTML pages for web design and Figma import
+```bash
+# Install tprompts
+npm install -g tprompts
 
-- `resource/` - Supporting resources and reference materials
-  - `memory-bank-prompt/` - Memory bank configurations
-  - `roo-code-system-prompt/` - System prompts for different operational modes
-    - Rules for architect, ask, code, and orchestrator modes
+# Register this repository
+tprompts register https://github.com/thongntit/prompts.git
+```
 
-## Usage
+## Available Prompts
 
-These prompts can be utilized in various ways:
+### 1. AI Coding Agent (Claude Code)
+**Purpose**: Enhanced coding assistant with memory management and workflow automation
 
-1. Direct Integration: Copy and adapt prompts for use in your AI applications
-2. Reference Material: Use as templates or inspiration for creating your own custom prompts
-3. System Configuration: Implement the system prompts for different operational modes in your AI frameworks
+```bash
+tprompts install prompts/coding-agent claude-code
+```
 
-## Future Plans
+**Features:**
+- Global coding guidelines and best practices
+- Context extraction and loading via windsurf.md files
+- Web search integration
+- Vibe designer for project styling
 
-This repository will continue to evolve with:
+**Commands:** `/vibe-designer`, `/load-context`, `/extract-context`, `/web-search`
 
-- Additional prompt collections for new use cases
-- Enhanced documentation and examples
-- Improved organization and categorization of prompts
-- Integration guides for popular AI platforms
-- Community contributions and best practices
+---
+
+### 2. Obsidian Agent (Claude Code)
+**Purpose**: Productivity assistant for Obsidian vault management
+
+```bash
+tprompts install prompts/obsidian-agent claude-code
+```
+
+**Features:**
+- PARA methodology (Projects, Areas, Resources, Archives)
+- Task tracking and management
+- Calendar integration
+- Vault organization automation
+
+**Commands:** Available as `/obsidian-agent`
+
+---
+
+### 3. Obsidian Second Brain (Roo Code)
+**Purpose**: Custom Roo Code mode for personal knowledge management
+
+```bash
+tprompts install prompts/obisidian-second-brain roo
+```
+
+**Features:**
+- PARA methodology implementation
+- Weekly and monthly review workflows
+- Memory system updates
+- Planning automation
+
+**Commands:** `/weekly-review`, `/monthly-review`, `/weekly-planner`, `/update-memory`
+
+---
+
+## Repository Structure
+
+```
+prompts/
+├── coding-agent/          # Claude Code: General coding assistant
+│   ├── system-prompt.md   # Global coding guidelines
+│   ├── commands/          # Custom slash commands
+│   └── tprompts.json      # Configuration
+├── obsidian-agent/        # Claude Code: Obsidian productivity
+│   ├── agent-instructions # PARA methodology instructions
+│   └── tprompts.json      # Configuration
+└── obisidian-second-brain/ # Roo Code: Knowledge management
+    ├── .roo/commands/     # Productivity commands
+    └── tprompts.json      # Configuration
+```
+
+## Direct Installation
+
+Each prompt can also be installed directly without repository registration:
+
+```bash
+# Example for coding-agent
+tprompts install https://github.com/thongntit/prompts/tree/main/prompts/coding-agent claude-code
+```
+
+## Recent Updates
+
+- **January 2025**: Restructured all prompts for tprompts compatibility
+- Added README files with installation instructions for each prompt collection
+- Implemented Obsidian Second Brain workflow with PARA methodology
+- Added context extraction/loading workflows for conversation management
+- Integrated Vibe Designer functionality into coding-agent commands
+
+## Contributing
+
+Contributions are welcome! When adding new prompts:
+
+1. Follow the tprompts structure with `tprompts.json` configuration
+2. Include a detailed README.md with installation instructions
+3. Document all custom commands and their usage
+4. Test with the target editor (Claude Code, Roo Code, etc.)
+
+## License
+
+This repository contains custom prompt configurations for personal and professional use.
