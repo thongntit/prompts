@@ -4,20 +4,16 @@ Global rules for AI coding assistant with memory and context management, plus wo
 
 ## Installation
 
-Install this prompt using [tprompts](https://github.com/dzhng/tprompts):
+Install this prompt using [tprompts](https://github.com/thongntit/tprompts):
 
 ```bash
-# Direct installation (no registration required)
-tprompts install https://github.com/thongntit/prompts/tree/main/prompts/coding-agent claude-code
-```
+# First, install tprompts if you haven't already
+npm install -g @thongntit/tprompts
 
-Or register the repository first for easier management:
-
-```bash
-# Register the repository
+# Register the prompts repository
 tprompts register https://github.com/thongntit/prompts.git
 
-# Then install the prompt
+# Install the prompt pack
 tprompts install prompts/coding-agent claude-code
 ```
 
