@@ -6,68 +6,35 @@ This repository provides a collection of production-ready prompt configurations 
 
 ## Quick Start
 
-Install [tprompts](https://github.com/thongntit/tprompts) and register this repository:
+Install [tprompts](https://github.com/thongntit/tprompts):
 
 ```bash
-# Install tprompts
 npm install -g @thongntit/tprompts
-
-# Register this repository
-tprompts register https://github.com/thongntit/prompts.git
 ```
+
+Then install prompts directly from this repository using the examples below.
 
 ## Available Prompts
 
-### Coding Assistants
+### 1. AI Coding Agent (Claude Code)
+Enhanced coding assistant with memory management and workflow automation.
 
-#### AI Coding Agent (Claude Code)
-**Purpose**: Enhanced coding assistant with memory management and workflow automation
+📖 [View detailed documentation](./prompts/coding-agent/README.md)
 
 ```bash
-tprompts install prompts/coding-agent claude-code
+tprompts install https://github.com/thongntit/prompts.git/prompts/coding-agent claude-code
 ```
-
-**Features:**
-- Global coding guidelines and best practices
-- Context extraction and loading via windsurf.md files
-- Web search integration
-- Vibe designer for project styling
-
-**Commands:** `/vibe-designer`, `/load-context`, `/extract-context`, `/web-search`
 
 ---
 
-### Productivity & Knowledge Management
+### 2. Obsidian Monthly Planner (Claude Code)
+Monthly planning and goal tracking for Obsidian vaults with PARA methodology integration.
 
-#### Obsidian Agent (Claude Code)
-**Purpose**: Productivity assistant for Obsidian vault management
-
-```bash
-tprompts install prompts/obsidian-agent claude-code
-```
-
-**Features:**
-- PARA methodology (Projects, Areas, Resources, Archives)
-- Task tracking and management
-- Calendar integration
-- Vault organization automation
-
-**Commands:** Available as `/obsidian-agent`
-
-#### Obsidian Second Brain (Roo Code)
-**Purpose**: Personal knowledge management system for Obsidian vaults
+📖 [View detailed documentation](./prompts/obsidian-monthly-planner/README.md)
 
 ```bash
-tprompts install prompts/obisidian-second-brain roo
+tprompts install https://github.com/thongntit/prompts.git/prompts/obsidian-monthly-planner claude-code
 ```
-
-**Features:**
-- PARA methodology implementation
-- Weekly and monthly review workflows
-- Memory system updates
-- Planning automation
-
-**Commands:** `/weekly-review`, `/monthly-review`, `/weekly-planner`, `/update-memory`
 
 ---
 
@@ -75,16 +42,13 @@ tprompts install prompts/obisidian-second-brain roo
 
 ```
 prompts/
-├── coding-agent/          # Claude Code: General coding assistant
-│   ├── system-prompt.md   # Global coding guidelines
-│   ├── commands/          # Custom slash commands
-│   └── tprompts.json      # Configuration
-├── obsidian-agent/        # Claude Code: Obsidian productivity
-│   ├── agent-instructions # PARA methodology instructions
-│   └── tprompts.json      # Configuration
-└── obisidian-second-brain/ # Roo Code: Knowledge management
-    ├── .roo/commands/     # Productivity commands
-    └── tprompts.json      # Configuration
+├── coding-agent/              # Claude Code: General coding assistant
+│   ├── system-prompt.md       # Global coding guidelines
+│   ├── commands/              # Custom slash commands
+│   └── tprompts.json          # Configuration
+└── obsidian-monthly-planner/  # Claude Code: Monthly planning
+    ├── .claude/commands/      # Monthly planner command
+    └── tprompts.json          # Configuration
 ```
 
 ## Recent Updates
@@ -103,7 +67,3 @@ Contributions are welcome! When adding new prompts:
 2. Include a detailed README.md with installation instructions
 3. Document all custom commands and their usage
 4. Test with the target editor (Claude Code, Roo Code, etc.)
-
-## License
-
-This repository contains custom prompt configurations for personal and professional use.
