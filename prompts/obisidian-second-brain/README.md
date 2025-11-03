@@ -41,9 +41,10 @@ tprompts install prompts/obisidian-second-brain claude
 - **Custom Mode**: Obsidian vault management using PARA methodology
 - **Productivity Commands**:
   - `/weekly-review` - Conduct weekly reviews of your tasks and progress
-  - `/update-memory` - Update your second brain memory system
-  - `/monthly-review` - Perform monthly reviews and planning
   - `/weekly-planner` - Plan your upcoming week
+  - `/monthly-review` - Perform monthly reviews and planning
+  - `/monthly-planner` - Create comprehensive monthly plans based on previous month's review
+  - `/update-memory` - Update your second brain memory system
 
 ## Editor Support
 
