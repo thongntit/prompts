@@ -1,0 +1,24 @@
+{
+  "name": "thongntit-prompts",
+  "description": "Custom Claude Code plugins: a coding-agent ruleset and an Obsidian Second Brain (PARA) workflow",
+  "owner": {
+    "name": "Thong Nguyen",
+    "email": "nanolove95@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "coding-agent",
+      "source": "./coding-agent",
+      "description": "Coding assistant rules with memory management, planning, and decision-making practices, plus context and design workflow commands",
+      "category": "development",
+      "keywords": ["coding", "rules", "context", "memory", "planning"]
+    },
+    {
+      "name": "obsidian-second-brain",
+      "source": "./obsidian-second-brain",
+      "description": "Obsidian Second Brain workflow — PARA structure, fast journaling, weekly/monthly planning and reviews, memory-bank maintenance",
+      "category": "productivity",
+      "keywords": ["obsidian", "para", "second-brain", "planning", "productivity", "journal", "review"]
+    }
+  ]
+}

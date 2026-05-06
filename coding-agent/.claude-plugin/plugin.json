@@ -1,0 +1,5 @@
+{
+  "name": "coding-agent",
+  "description": "Coding assistant rules with memory management, planning, and decision-making practices, plus context and design workflow commands",
+  "version": "1.0.0"
+}

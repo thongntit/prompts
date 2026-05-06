@@ -1,69 +1,49 @@
-# Custom Prompts Collection
+# thongntit-prompts
 
-## Project Overview
+A Claude Code [plugin marketplace](https://code.claude.com/docs/en/plugin-marketplaces) with two plugins.
 
-This repository provides a collection of production-ready prompt configurations for various AI assistants, specifically designed for [tprompts](https://github.com/thongntit/tprompts) compatibility. Each prompt collection includes system instructions, custom commands, and specialized workflows optimized for different use cases including coding assistance, productivity management, and knowledge organization.
+## Plugins
 
-## Quick Start
+| Plugin | Description |
+| :----- | :---------- |
+| [`coding-agent`](./coding-agent/README.md) | Coding assistant rules + workflow commands (`/vibe-designer`, `/load-context`, `/web-search`, `/extract-context`) |
+| [`obsidian-second-brain`](./obsidian-second-brain/README.md) | Obsidian PARA workflow as 9 auto-invoked skills: `para`, `create-note`, `journal`, `weekly-planner`, `weekly-review`, `monthly-planner`, `monthly-review`, `update-memory`, `this-week-status` |
 
-Install [tprompts](https://github.com/thongntit/tprompts):
+## Install
 
-```bash
-npm install -g @thongntit/tprompts
-```
-
-Then install prompts directly from this repository using the examples below.
-
-## Available Prompts
-
-### 1. AI Coding Agent (Claude Code)
-Enhanced coding assistant with memory management and workflow automation.
-
-📖 [View detailed documentation](./prompts/coding-agent/README.md)
+Add the marketplace once, then install whichever plugins you want:
 
 ```bash
-tprompts install https://github.com/thongntit/prompts.git/prompts/coding-agent claude-code
+/plugin marketplace add thongntit/prompts
+/plugin install coding-agent@thongntit-prompts
+/plugin install obsidian-second-brain@thongntit-prompts
 ```
 
----
-
-### 2. Obsidian Monthly Planner (Claude Code)
-Monthly planning and goal tracking for Obsidian vaults with PARA methodology integration.
-
-📖 [View detailed documentation](./prompts/obsidian-monthly-planner/README.md)
+To update later:
 
 ```bash
-tprompts install https://github.com/thongntit/prompts.git/prompts/obsidian-monthly-planner claude-code
+/plugin marketplace update thongntit-prompts
 ```
 
----
-
-## Repository Structure
+## Repository structure
 
 ```
-prompts/
-├── coding-agent/              # Claude Code: General coding assistant
-│   ├── system-prompt.md       # Global coding guidelines
-│   ├── commands/              # Custom slash commands
-│   └── tprompts.json          # Configuration
-└── obsidian-monthly-planner/  # Claude Code: Monthly planning
-    ├── .claude/commands/      # Monthly planner command
-    └── tprompts.json          # Configuration
+.claude-plugin/marketplace.json     # marketplace catalog
+coding-agent/
+  ├── .claude-plugin/plugin.json
+  ├── skills/coding-agent/SKILL.md  # global ruleset (loads contextually)
+  └── commands/                     # slash commands
+obsidian-second-brain/
+  ├── .claude-plugin/plugin.json
+  └── skills/                       # 9 PARA / planning / review skills (auto-invoked)
 ```
-
-## Recent Updates
-
-- **January 2025**: Restructured all prompts for tprompts compatibility
-- Added README files with installation instructions for each prompt collection
-- Implemented Obsidian Second Brain workflow with PARA methodology
-- Added context extraction/loading workflows for conversation management
-- Integrated Vibe Designer functionality into coding-agent commands
 
 ## Contributing
 
-Contributions are welcome! When adding new prompts:
+To add a new plugin:
 
-1. Follow the tprompts structure with `tprompts.json` configuration
-2. Include a detailed README.md with installation instructions
-3. Document all custom commands and their usage
-4. Test with the target editor (Claude Code, Roo Code, etc.)
+1. Create a top-level directory `<plugin-name>/`
+2. Add `<plugin-name>/.claude-plugin/plugin.json` with `name`, `description`, `version`
+3. Add components (`commands/`, `skills/`, `agents/`, `hooks/`, etc.)
+4. Register it in `.claude-plugin/marketplace.json` under `plugins`
+5. Validate with `claude plugin validate .`

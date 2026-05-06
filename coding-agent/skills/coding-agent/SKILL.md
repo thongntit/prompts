@@ -1,3 +1,7 @@
+---
+description: General coding assistant rules — code quality, memory and context management, decision-making, and planning practices for software engineering tasks
+---
+
 # AI Coding Assistant Rules
 
 ## Code Quality & Comments
